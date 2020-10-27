@@ -11,21 +11,18 @@ import ru.itis.resumeservice.models.Applicant;
 import ru.itis.resumeservice.services.ApplicantService;
 
 @Controller
-@RequestMapping("/signUp")
 public class SignUpController {
 
     @Autowired
     private ApplicantService applicantService;
 
-    @GetMapping
-    @PreAuthorize("permitAll()")
+    @GetMapping("/signUp")
     public String getSignUpPage() {
         return "sign_up";
     }
 
 
-    @PostMapping
-    @PreAuthorize("permitAll()")
+    @PostMapping("/signUp")
     public String signUp(ApplicantDto applicant) {
         applicantService.save(applicant);
         return "redirect:/home";
