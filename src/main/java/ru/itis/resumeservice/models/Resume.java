@@ -16,6 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Resume {
     @Id
     private String id;
+    private String name;
     private String about;
     private String workExperience;
     private String education;
