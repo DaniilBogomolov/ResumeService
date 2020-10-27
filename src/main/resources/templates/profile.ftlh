@@ -14,7 +14,7 @@
 <#list profileInfo.resumeDtoList>
     <ul>
         <#items as resume>
-            <li><a href="${resume.id}">${resume.name}</a></li>
+            <li><a href="/resume/get/${resume.id}">${resume.name}</a></li>
         </#items>
     </ul>
 </#list>

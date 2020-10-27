@@ -41,7 +41,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/home").permitAll()
                 .antMatchers("/signUp").anonymous()
                 .antMatchers("/profile").authenticated()
-                .antMatchers("/resume/**").authenticated();
+                .antMatchers("/resume/create", "resume/delete/**", "resume/update/**").authenticated();
     }
 
     @Override
